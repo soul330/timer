@@ -10,6 +10,7 @@ FONT_NAME = "Courier"
 WORK_MIN = 25
 SHORT_BREAK_MIN = 5
 LONG_BREAK_MIN = 20
+BLACK = "#000000"
 reps = 0
 timer = None
 
@@ -78,15 +79,15 @@ def count_down(count):
 window = Tk()
 
 window.title("Pomodoro App")
-window.config(padx=100, pady=50, bg=YELLOW)
+window.config(padx=100, pady=50, bg=BLACK)
 
 title_label = Label(text="Timer", fg=GREEN, bg=YELLOW, font=(FONT_NAME, 50,))
 title_label.grid(column=1, row=0)
 
 
-canvas = Canvas(width=200, height=224, bg=YELLOW, highlightthickness=0)
-abi_and_kei_image = PhotoImage(file="father-abi.png")
-canvas.create_image(100, 112, image=abi_and_kei_image)
+canvas = Canvas(width=400, height=400, bg=YELLOW, highlightthickness=0)
+baby_lion_img = PhotoImage(file="baby-lion.png")
+canvas.create_image(140, 112, image=baby_lion_img)
 timer_text = canvas.create_text(100, 130, text="00:00", fill="white", font=(FONT_NAME, 35, "bold"))
 canvas.grid(column=1, row=1)
 
@@ -98,7 +99,7 @@ start_button.grid(column=0, row=2)
 reset_button = Button(text="Reset", command=reset_timer)
 reset_button.grid(column=2, row=2)
 
-check_marks = Label(fg=GREEN, bg=YELLOW)
+check_marks = Label(fg=GREEN, bg=BLACK)
 check_marks.grid(column=1, row=3)
 
 
